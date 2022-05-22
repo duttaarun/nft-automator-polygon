@@ -1,0 +1,30 @@
+{
+  "name": "nft-automator-polygon",
+  "version": "1.0.0",
+  "description": "NFT Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duttaarun/nft-automator-polygon.git"
+  },
+  "author": "duttaarun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duttaarun/nft-automator-polygon/issues"
+  },
+  "homepage": "https://github.com/duttaarun/nft-automator-polygon#readme",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.6",
+    "@nomiclabs/hardhat-etherscan": "^3.0.3",
+    "@openzeppelin/contracts": "^4.6.0",
+    "ethers": "^5.0.0",
+    "hardhat": "^2.9.6",
+    "node-fetch": "^2.6.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
