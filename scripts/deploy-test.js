@@ -11,12 +11,17 @@ async function main() {
     // calling deploy() will return an async Promise that we can await on 
     const nft = await NFT.deploy();
 
-    console.log(`Contract deployed to address: ${nft.address}`);
+    await nft.deployed()
+    // This solves the bug in Mumbai network where the contract address is not the real one
+    const txHash = nft.deployTransaction.hash
+    const txReceipt = await ethers.provider.waitForTransaction(txHash)
+    const contractAddress = txReceipt.contractAddress
+    console.log("Contract deployed to address:", contractAddress);
 }
 
 main()
-.then(() => process.exit(0))
-.catch((error) => {
-    console.error(error);
-    process.exit(1);
-});
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });
