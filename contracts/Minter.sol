@@ -13,7 +13,7 @@ contract Minter is ERC721, Ownable {
     // Map token Ids to token URI
     mapping(uint256 => string) private _tokenURIs;
 
-    constructor() ERC721("NFTAutomatedMinterAppv3", "Minter") {}
+    constructor() ERC721("NFTAutomatedMinterAppv314", "Minter") {}
 
     function mintTo(address recipient, string memory uri)
         public

@@ -1,5 +1,5 @@
-const CONTRACT_ADDRESS = "0x045C4E263F0c9BbC8A8E0ecBB8b4de832b2707c3"
-const META_DATA_URL = "ipfs://QmRkt52v7Kc2zWDmgcZMNpwnaoFES8gMDhngkDWY31y3m6/metadata.json"
+const CONTRACT_ADDRESS = "0x91d9985B137b2a02a1C9D3214a0b4ce7c96b3aa3"
+const META_DATA_URL = "https://gateway.pinata.cloud/ipfs/QmVmmG2NdAjFThNXu8ztAj4GbWLAZGWUUvKGPwLziuMQmk"
 
 async function mintNFT(contractAddress, metaDataURL) {
    const ExampleNFT = await ethers.getContractFactory("Minter")
