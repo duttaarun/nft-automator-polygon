@@ -7,7 +7,7 @@ Automated NFT uploads and listing on Polygon chain (Main and Testnet) and Rinkeb
 - `npx hardhat mint-nft <contract-addr> --network PolygonMumbai` - Mints the NFT defined in config using the contract
 
 # Environment variables
-Following environment varibles must be defined
+Following environment varibles must be defined in a .env file.
  
 - `ALCHEMY_KEY` = This is the Alchemy development key 
 - `ALCHEMY_MAINNET_KEY` = Polygon Mainnet key (In case you are using Alchmey or Infura RPC urls)
