@@ -18,7 +18,7 @@ task("deploy", "Deploys the  Minter.sol contract").setAction(async function (tas
     // Fetch the compiled contract using ethers.js
     const NFT = await ethers.getContractFactory("Minter");
     // calling deploy() will return an async Promise that we can await on 
-    const nft = await NFT.deploy('NFTTutorial', 'Minter');
+    const nft = await NFT.deploy('Magestic Mountains', 'Minter');
 
     await nft.deployed()
     // This solves the bug in Mumbai network where the contract address is not the real one
@@ -36,8 +36,8 @@ task("verify-contract", "Verifies the contract on chain")
     await hre.run("verify:verify", {
         address: taskArguments['contract'],
         constructorArguments: [
-          "NFTTutorial",
-          "NFMinter"
+          "Magestic Mountains",
+          "Minter"
         ]
       })
 });

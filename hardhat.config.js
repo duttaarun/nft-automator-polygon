@@ -7,7 +7,7 @@ require("@nomiclabs/hardhat-etherscan");
 require("./scripts/deploy");
 require("./scripts/mint")
 
-const { ALCHEMY_KEY, ACCOUNT_PRIVATE_KEY, ALCHEMY_RINKEBY_KEY, POLYGON_MUMBAI_KEY, RINKEBY_KEY } = process.env;
+const { ALCHEMY_KEY, ACCOUNT_PRIVATE_KEY, ALCHEMY_RINKEBY_KEY, POLYGON_MUMBAI_KEY, RINKEBY_KEY, ALCHEMY_MAINNET_KEY } = process.env;
 module.exports = {
   solidity: "0.8.4",
   networks: {
@@ -24,12 +24,17 @@ module.exports = {
     rinkeby: {
       url: `https://eth-rinkeby.alchemyapi.io/v2/${ALCHEMY_RINKEBY_KEY}`,
       accounts: [`0x${ACCOUNT_PRIVATE_KEY}`]
-    }
+    },
+    polygon: {
+      chainId: 137,
+      url: `https://polygon-mainnet.g.alchemy.com/v2/${ALCHEMY_MAINNET_KEY}`,
+      accounts: [`0x${ACCOUNT_PRIVATE_KEY}`]
+    },
   },
   etherscan: {
     apiKey: {
       rinkeby: `${RINKEBY_KEY}`,
-      polygon: "POLYGONSCAN_API_KEY",
+      polygon: `${POLYGON_MUMBAI_KEY}`,
       polygonMumbai: `${POLYGON_MUMBAI_KEY}`
     }
   }
