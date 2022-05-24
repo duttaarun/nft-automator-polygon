@@ -7,13 +7,14 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Minter is ERC721, Ownable {
     using Counters for Counters.Counter;
-    using Strings for uint256;
     Counters.Counter private currentTokenId;
 
-    // Map token Ids to token URI
+    // This will act at a very high level like an array
     mapping(uint256 => string) private _tokenURIs;
 
-    constructor() ERC721("NFTAutomatedMinterAppv314", "Minter") {}
+    constructor(string memory name, string memory symbol)
+        ERC721(name, symbol)
+    {}
 
     function mintTo(address recipient, string memory uri)
         public

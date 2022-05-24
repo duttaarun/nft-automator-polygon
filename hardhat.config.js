@@ -4,6 +4,8 @@
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
+require("./scripts/deploy");
+require("./scripts/mint")
 
 const { ALCHEMY_KEY, ACCOUNT_PRIVATE_KEY, ALCHEMY_RINKEBY_KEY, POLYGON_MUMBAI_KEY, RINKEBY_KEY } = process.env;
 module.exports = {
