@@ -10,6 +10,7 @@ Automated NFT uploads and listing on Polygon chain (Main and Testnet) and Rinkeb
 Following environment varibles must be defined
  
 - `ALCHEMY_KEY` = This is the Alchemy development key 
+- `ALCHEMY_MAINNET_KEY` = Polygon Mainnet key (In case you are using Alchmey or Infura RPC urls)
 - `ACCOUNT_PRIVATE_KEY` = This is the private key for the Eth Wallet
 - `POLYGON_MUMBAI_KEY` = This polygon mumbai key for ethercan contract verification
 - `ALCHEMY_RINKEBY_KEY` = Alchemy Key to deploy contract on Eth network using Rinkeby network
