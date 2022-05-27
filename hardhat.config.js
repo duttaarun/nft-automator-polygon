@@ -6,6 +6,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 require("./scripts/deploy");
 require("./scripts/mint")
+require("./scripts/pinata");
 
 const { ALCHEMY_KEY, ACCOUNT_PRIVATE_KEY, ALCHEMY_RINKEBY_KEY, POLYGON_MUMBAI_KEY, RINKEBY_KEY, ALCHEMY_MAINNET_KEY } = process.env;
 module.exports = {
