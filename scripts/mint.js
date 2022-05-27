@@ -1,4 +1,4 @@
-const META_DATA_URL = "https://gateway.pinata.cloud/ipfs/<CID-HASH-ON-IPFS>"
+const META_DATA_URL = "https://gateway.pinata.cloud/ipfs/"
 
 const { task } = require("hardhat/config");
 

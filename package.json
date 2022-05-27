@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile": "npx hardhat compile"
+    "compile": "npx hardhat compile",
+    "nft-dir-extract" : "cd ./nft-parse && node exec.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
     "node-fetch": "^2.6.7"
   },
   "dependencies": {
+    "@pinata/sdk": "^1.1.25",
+    "axios": "^0.27.2",
     "dotenv": "^16.0.1"
   }
 }
